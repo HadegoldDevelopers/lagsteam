@@ -1,0 +1,538 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Explore Lagos</title>
+  <link rel="stylesheet" href="/css/styles.css" />
+
+  <!-- Leaflet CSS & JS (via CDN) -->
+  <link rel="stylesheet" href="https://unpkg.com/leaflet@1.9.4/dist/leaflet.css" />
+  <script src="https://unpkg.com/leaflet@1.9.4/dist/leaflet.js"></script>
+  <!-- Google Fonts - Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="/"><h1 class="logo">
+        <img src="img/logo.png" alt="Lagos State Logo" />
+        <span>Lagos State Government</span> <!-- Added text next to logo as seen in image -->
+      </h1></a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="/index.html">Home</a></li>
+          <li><a href="/appreciate.html">Appreciation</a></li>
+          <li><a href="/project.html">Projects</a></li>
+          <li><a href="#" class="active">Explore Lagos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Discover Section (with background image and overlaid content) -->
+  <section class="discover-section">
+    <!-- The overlay is now part of the background property in CSS -->
+    <div class="discover-content-wrapper">
+      <div class="discover-overlay-content">
+        <!-- Renamed from discover-overlay to avoid confusion with the full section overlay -->
+        <div class="container center">
+          <h2>Discover Lagos</h2>
+          <p>Explore the heartbeat of Lagos through the eyes of young tech talents. This page brings to life the beauty,
+            culture, and energy of Lagos – from the bustling streets of Oshodi to the serene shores of Lekki. Learn
+            about
+            the city we love through curated stories, visuals, and facts coded and designed by our proud developers.</p>
+          <a href="#lga-map" class="btn">Visit LGA Project</a>
+        </div>
+      </div>
+      <!-- Lagos State Flag / Coat of Arms & Color Bars -->
+      <div class="lagos-state-wrapper"> <!-- Corrected class name as previously discussed -->
+        <!-- Using your actual image path for the flag -->
+        <img src="img/Lagos_State_Flag.png" alt="Lagos State Flag" class="lagos-flag">
+      </div>
+    </div>
+
+    <!-- BRT and Moving Bus Animation Banner -->
+    <div class="brt-animation-text-banner">
+      <div class="brt-animation-text-overlay"></div>
+      <div class="bus brt-bus bus-1"></div>
+      <div class="bus yellow-bus bus-2"></div>
+      <div class="bus brt-bus bus-3"></div>
+      <div class="bus yellow-bus bus-4"></div>
+      <div class="bus brt-bus bus-5"></div>
+    </div>
+  </section>
+
+  <!-- Welcome & BRT Section -->
+  <section class="section">
+    <div class="container explore-split">
+      <div class="text-explore">
+        <h2>Welcome to Lagos</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+        <a href="#" class="btn">HTML Quiz</a>
+      </div>
+      <div class="brt-section">
+        <h2>BRT Section</h2>
+        <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor</p>
+        <a href="#" class="btn-outline">Learn More</a>
+      </div>
+    </div>
+  </section>
+
+  <!-- Map Section -->
+  <section class="section center" id="lga-map">
+    <h2>Lagos Map and its LGA</h2>
+    <div class="section-divider"></div>
+    <h4>Learn More About the LGAs</h4>
+    <p class="description">Click on the Map to see more about the local government</p>
+    <div id="map" class="map-container"></div>
+    <a href="#lga-grid" class="btn">Know More</a>
+  </section>
+
+  <!-- Places in Lagos Grid -->
+  <section class="section center grey-explore" id="lga-grid">
+    <div class="container">
+      <h2>Explore Lagos LGAs</h2>
+      <div class="section-divider"></div>
+      <h4>Discover the diversity across local government areas</h4>
+      <p class="description">
+        Click on any location below to learn more about its history, culture, and attractions.
+      </p>Click on the Map to see more about the local government</p>
+  
+      <div class="places-grid swiper">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="hover-card">
+              <a href="#agege"><img src="img/lgas/agege.jpg" alt="Agege" class="place-img" /></a>
+              <span class="hover-label">Agege Local Government</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hover-card">
+              <a href="#alimosho">
+                <img src="img/lgas/alimosho.png" alt="Alimosho" class="place-img" /></a>
+              <span class="hover-label">Alimosho Local Government</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hover-card">
+              <a href="#ikeja"><img src="img/lgas/ikeja.jpg" alt="Ikeja" class="place-img" /></a>
+              <span class="hover-label">Ikeja Local Government</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hover-card">
+              <a href="#etiosa"><img src="img/lgas/eti-osa.jpg" alt="Eti-Osa" class="place-img" /></a>
+              <span class="hover-label">Eti-Osa Local Government</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hover-card">
+              <a href="#surulere"><img src="img/lgas/surulere.jpg" alt="Surulere" class="place-img" /></a>
+              <span class="hover-label">Surulere Local Government</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hover-card">
+              <a href="#lekki"><img src="img/lgas/lekki.jpg" alt="Lekki" class="place-img" /></a>
+              <span class="hover-label">Lekki Local Government</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hover-card">
+              <a href="#ikorodu"><img src="img/lgas/ikorodu.jpg" alt="Ikorodu" class="place-img" /></a>
+              <span class="hover-label">Ikorodu Local Government</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hover-card">
+              <a href="#mushin"><img src="img/lgas/mushin.jpg" alt="Mushin" class="place-img" /></a>
+              <span class="hover-label">Mushin Local Government</span>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="hover-card">
+              <a href="#ajeromi"><img src="img/lgas/ajeromi.jpg" alt="Ajeromi" class="place-img" /></a>
+              <span class="hover-label">Ajeromi Local Government</span>
+            </div>
+          </div>
+        </div>
+      </div>
+      <br>
+      <hr><br>
+      <div id="more">
+        <section id="agege">
+          <h2>Agege Local Government</h2>
+          <h3>Origins &amp; Growth</h3>
+          <img src="img/lgas/agege.jpg" alt="Agege landscape">
+          <p>In the heartbeat of Lagos Mainland lies Agege — a bustling, down-to-earth community that tells two stories at
+            once: the smell of fresh bread rising from neighborhood bakeries, and the roar of football fans echoing from
+            the local stadium.</p>
+          <p><br>
+            • Established as part of colonial decentralization in the 1960s, Agege expanded from farmland into a dense
+            urban settlement.<br>
+            • Became a crucial transport hub due to its position along rail and road routes into Lagos City.</p>
+  
+          <h3>Economy &amp; Trade</h3>
+          <img src="img/lgas/agege.png" alt="Agege market">
+          <p>Agege is the birthplace of Nigeria’s most iconic bread — the soft, stretchy, slightly sweet loaf known as
+            Agege Bread. </p>
+          <p>• Renowned for vibrant markets such as Agege Bread and Agboju Market.<br>
+            • Small factories and workshops produce goods for local commerce.</p>
+  
+          <h3>Culture &amp; Landmarks</h3>
+          <img src="img/lgas/agege2.png" alt="Agege Stadium">
+          <p>Home to Agege Stadium, a popular venue for sports and cultural shows. Agege Stadium keeps the city's sporting
+            pulse alive. </p>
+          <h3>Together, these two — bread and football — shape the soul of Agege</h3>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="alimosho">
+          <h2>Alimosho Local Government</h2>
+          <h3>Background &amp; Expansion</h3>
+          <img src="img/lgas/alimosho.png" alt="Alimosho estates">
+          <p>One of Nigeria’s most populous LGAs, carved out in the 1960s–70s to meet rising housing demands.Rapid urban development but still holds rural pockets on its borders.</p>
+  
+          <h3>Infrastructure &amp; Services</h3>
+          <p>Modern housing estates and major roads (like Owode–Onigbongbo stretch).<br>
+            Hospitals and schools spread across various towns like Egbeda, Ijegun, Akowonjo.</p>
+  
+          <h3>Demographics &amp; Culture</h3>
+          <p>• A diverse mix of ethnic groups (Yoruba, Igbo, Hausa, and others).<br>
+            • Hosts festivals like Oro, Egungun masquerades, and annual harvest celebrations.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="ikeja">
+          <h2>Ikeja Local Government</h2>
+          <h3>Establishment &amp; Administration</h3>
+          <img src="img/lgas/ikeja.jpg" alt="Ikeja Secretariat">
+          <p>• Created in 1967 as the capital of Lagos State.<br>
+            • Planned administrative city with government offices, judiciary, and ministries.</p>
+  
+          <h3>Business &amp; Economy</h3>
+          <img src="ikeja_economy.jpg" alt="ikeja">
+          <p>• Contains Ikeja City Mall, Computer Village (Africa’s largest ICT market), and Alausa Secretariat.<br>
+            • Hosts several multinational corporations and major banks.</p>
+  
+          <h3>Johnson Jakande Tinubu (JJT) Park, Alausa</h3>
+          <img src="img/lgas/jjt_ikeja.png" alt="Ikeja nightlife">
+          <p>• Opened December 2017, named after former governors Mobolaji Johnson, Lateef Jakande and Bola Tinubu.<br>
+            • <strong>Features & Use:</strong>21,880 sqm green space with playground, giant chessboard, fountains, jogging
+            paths, picnic/rest spots, security & restrooms.<br>
+            • <strong>Good for:</strong> Walks, leisure, family visits, events, and photography.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="etiosa">
+          <h2>Eti‑Osa Local Government</h2>
+          <h3>Heritage &amp; Formation</h3>
+          <img src="img/lgas/eti-osa.jpg" alt="etiosa">
+          <p>• Constituents date to the original fishing villages – Island communities that became urban as Lagos expanded
+            east.<br>
+            • Administratively formed in the 1970s.</p>
+  
+          <h3>Urbanization &amp; Jet Set Zone</h3>
+          <p>• Encompasses high‑end suburbs like Victoria Island, Lekki Phase 1, and parts of Ajah.<br>
+            • Features luxury apartments, offices, seafront hotels, and waterfront promenades.</p>
+  
+          <h3>Recreation &amp; Arts</h3>
+          <p>• Hosts cultural centres like Nike Art Gallery, Terra Kulture, and many fine‑dining spots.<br>
+            • Beaches (Alpha, Oniru) popular for relaxation and events.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="surulere">
+          <h2>Surulere Local Government</h2>
+          <h3>History &amp; Identity</h3>
+          <img src="img/lgas/surulere.jpg" alt="Surulere">
+          <p>• Known as a middle‑class residential area since the 1960s.<br>
+            • Evolved into a sporting and entertainment community.</p>
+  
+          <h3>Sports Excellence</h3>
+          <img src="img/lgas/iganmu.png" alt="National Stadium">
+          <p> Built in 1976 under General Gowon and completed by Obasanjo to host FESTAC 77. Inspired by Bulgaria’s Varna
+            theatre, it’s Nigeria’s premier performing arts centre. Renamed in 2024 in honor of Nobel Laureate Wole
+            Soyinka. <br>
+            • Contains the National Stadium (completed 1972) – centre for athletics, soccer, and big events.<br>
+            • Many renowned athletes and performers call Surulere home.</p>
+  
+          <h3>Culture &amp; Entertainment</h3>
+          <p>• Vibrant nightlife with clubs, lounges, and eateries on Adeniran Ogunsanya.<br>
+            • Hosts music industry activities and Nollywood talent hubs.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="lekki">
+          <h2>Lekki Local Government</h2>
+          <h3>Formation &amp; Expansion</h3>
+          <img src="img/lgas/lekki.jpg" alt="Lekki development">
+          <p>• Carved out from Eti‑Osa to better manage rapid coastal development.<br>
+            • Transformed from fishing land to upscale residential/business district.</p>
+  
+          <h3>Urban Planning &amp; Residential Estates</h3>
+          <p>• Includes major estates: Chevron, Lekki Gardens, and Ajah phase 2.<br>
+            • Features modern shopping centres, hospitals, and schools.</p>
+  
+          <h3>Tourism &amp; Conservation</h3>
+          <p>• Visitors enjoy Lekki Conservation Centre (the canopy walkway), beaches, and tourist sports.<br>
+            • Hosts annual events like Eko Atlantic’s Eko Commission.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="ikorodu">
+          <h2>Ikorodu Local Government</h2>
+          <h3>Historical Roots</h3>
+          <img src="img/lgas/ikorodu.jpg" alt="Ikorodu lagoon">
+          <p>• Founded early as a farming and fishing town on Lagos Lagoon’s north shore.<br>
+            • Pre‑colonial origin traces to the Awori people.</p>
+  
+          <h3>Industrial &amp; Agricultural Mix</h3>
+          <img src="img/lgas/ikorodu_agri.jpg" alt="Ikorodu farm">
+          <p>• Produces rice, cassava, and vegetables in its hinterlands.<br>
+            • Hosts growing light‑industry zones and markets.</p>
+  
+          <h3>Growth &amp; Connectivity</h3>
+          <img src="/img/lgas/ikorodu_growth.jpeg" alt="Ikorodu suburb">
+          <p>• Expanding suburbs like Imota, Agbowa, Igbogbo.<br>
+            • Road improvements (Ikorodu–Lekki expressway) easing commute to Lagos metropolis.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="mushin">
+          <h2>Mushin Local Government</h2>
+          <h3>Early Beginnings</h3>
+          <img src="img/lgas/mushin.jpg" alt="Mushin">
+          <p>• Grew out of small village and grew quickly after Lagos sprawl in mid‑20th century.<br>
+            • Became a commercial hub with dense, multi‑story buildings.</p>
+  
+          <h3>Commerce &amp; Vibrancy</h3>
+          <p>• Central Mushin market and Onipanu Market are energetic trading spots.<br>
+            • Known for tailors, auto repairs, textiles, and second‑hand clothes trade.</p>
+  
+          <h3>Culture &amp; Community</h3>
+          <p>• Music and entertainment scene thrives — many artists, DJs began in Mushin.<br>
+            • Community holds strong social networks, clubs, and support groups.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="ajeromi">
+          <h2>Ajeromi‑Ifelodun Local Government</h2>
+          <h3>Origins &amp; Urban Pressure</h3>
+          <img src="img/lgas/ajeromi.jpg" alt="Ajeromi">
+          <p>• Set aside when Lagos State restructured in the 1990s to manage swelling slum populations in Ajegunle.<br>
+            • Home to Ajegunle, one of West Africa’s largest slum settlements.</p>
+  
+          <h3>Economy &amp; Hardiness</h3>
+          <p>• Bustling informal economy: barter trade, small‑scale manufacturing, service providers.<br>
+            • Strong entrepreneurial spirit in the community.</p>
+  
+          <h3>Culture &amp; Music</h3>
+          <p>• Cradle of Nigerian music genres like galala and street pop.<br>
+            • A colourful nightlife, local comedy, and grassroots festivals flourish here.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="epe">
+          <h2>Epe Local Government</h2>
+          <h3>Fishing Heritage</h3>
+          <img src="" alt="Epe">
+          <p>• Originated as a fishing village near Lekki Lagoon.<br>
+            • Hosts traditional annual fishing festivals, including Okupe (Hermit Crab) festival.</p>
+  
+          <h3>Trade &amp; Agriculture</h3>
+          <p>• A market centre for fish, yams, vegetables and coastal cooking ingredients.<br>
+            • Boats regularly shuttle catches to Lagos mainland.</p>
+  
+          <h3>Tourism &amp; Eco‑Attractions</h3>
+          <p>• Near landmarks like Epe Mangrove Forest and Omu Resort.<br>
+            • Gateway to Lekki–Epe migration corridor and ecotourism.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="badagry">
+          <h2>Badagry Local Government</h2>
+          <h3>Colonial &amp; Historical Significance</h3>
+          <img src="" alt="Badagry">
+          <p>• One of Nigeria’s oldest towns; a major slave‑trading port in the 18th–19th centuries.<br>
+            • Hosts the Badagry Heritage Museum, Slave Relics Museum, and the “Point of No Return” slave route site.</p>
+  
+          <h3>Crocodile Conservation &amp; Festivals</h3>
+          <p>• Home to sacred Epeh Crocodile Pond.<br>
+            • Hosts annual Badagry Festival celebrating history, music, dance, and crafts.</p>
+  
+          <h3>Coastal Tourism</h3>
+          <p>• Beach outings to Black Heritage Beach, safe swimming spots on the Atlantic shore.<br>
+            • Cultural village tours and boat excursions enhance visit.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="oshodi">
+          <h2>Oshodi‑Isolo Local Government</h2>
+          <h3>From Cocoa Farm to Transit Hub</h3>
+          <img src="" alt="Oshodi">
+          <p>• Retains name of Osodi tree (‘osodi’ in Yoruba) – once farmland, now crowded transit corridor.<br>
+            • One of Nigeria’s busiest bus terminals connects to other states.</p>
+  
+          <h3>Market &amp; Transport Economy</h3>
+          <p>• Shaw Market serves many daily customers.<br>
+            • The Oshodi Bus Terminal is a major driver of jobs and commerce.</p>
+  
+          <h3>Urban Renewal &amp; Challenges</h3>
+          <img src="" alt="Oshodi">
+          <p>• Lagos State redevelopment drives regular demolitions and rebuilding.<br>
+            • Population density stresses sanitation, traffic, and housing infrastructure.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="amuwo">
+          <h2>Amuwo‑Odofin Local Government</h2>
+          <h3>New LGA &amp; Land Reclamation</h3>
+          <img src="" alt="Amuwo">
+          <p>• Carved out in 1996 from Mushin/Apapa corridors.<br>
+            • Built on reclaimed Malibu area, now filled with estates and light industries.</p>
+  
+          <h3>Industrial &amp; Logistics Zone</h3>
+          <p>• Includes Apapa–Amuwo industrial corridor, warehouses, small factories, logistics services.<br>
+            • Hosts some Apapa port spillover infrastructure.</p>
+  
+          <h3>Residential Estates &amp; Builders</h3>
+          <p>• Features military estates (ILORIN Barracks), PDP Estate, Amuwo Millennium Estate.<br>
+            • Population includes public servants and industrial workers.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="kosofe">
+          <h2>Kosofe Local Government</h2>
+          <h3>Early Administrative Era</h3>
+          <img src="" alt="Kosofe">
+          <p>• Created 1989–90 to administer suburban communities like Ketu, Agboyi, Alapere.<br>
+            • Developed along Lagos–Ikorodu Road corridors.</p>
+  
+          <h3>Commerce &amp; Daily Life</h3>
+          <p>• Houses markets such as Ketu and Mile 12 extension (Agboyi).<br>
+            • Active street life, with artisans, food vendors, and shops.</p>
+  
+          <h3>Cultural &amp; Social Fabric</h3>
+          <p>• Hosts numerous traditional festivals, Egungun masquerade, social clubs.<br>
+            • Cosplay of faiths: big churches, mosques, Islamic schools, PYM schools.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="ojo">
+          <h2>Ojo Local Government</h2>
+          <h3>A Historic Port Town</h3>
+          <img src="" alt="Old Ojo">
+          <p>• Originally from Isale Ojo fishing town founded centuries ago.<br>
+            • Developed under colonial influence, once Lagos’s gateway to western hinterland.</p>
+  
+          <h3>Education &amp; University Campus</h3>
+          <p>• Lagos State University (LASU) at Ojo became a major educational hub since 1983.<br>
+            • Tie between student activity and local economy is strong.</p>
+  
+          <h3>Commerce &amp; Festivals</h3>
+          <p>• Occupies markets like Alaba Rago (electronics), small traders on Idi‑Oro Road.<br>
+            • Several yearly cultural festivals held by traditional rulers.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="ifako">
+          <h2>Ifako‑Ijaiye Local Government</h2>
+          <h3>Origins &amp; Boundaries</h3>
+          <img src="" alt="Ifako">
+          <p>• Set up 1996 from Ikeja LGA to manage growing suburban areas.<br>
+            • Encompasses communities like Ogba, Ogudu, Ifako.</p>
+  
+          <h3>Residential &amp; Transport Links</h3>
+          <p>• Mix of private housing estates and bus terminals for commuters to Lagos CBD.<br>
+            • Home to the 2012‑built Ojodu Bus Terminus.</p>
+  
+          <h3>Social Amenities &amp; Schools</h3>
+          <p>• Hosts public schools and general hospitals (Ifako General Hospital).<br>
+            • Small industries and markets provide livelihoods.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+  
+        <section id="somolu">
+          <h2>Somolu Local Government</h2>
+          <h3>Emergence &amp; Community</h3>
+          <img src="" alt="Somolu">
+          <p>• Known for typists, printing presses – nicknamed “Shomolu market for typewriting.”<br>
+            • Densely populated since mid‑20th century urban sprawl.</p>
+  
+          <h3>Printing &amp; Commerce</h3>
+          <p>• Centre for books, printing, publishing and cut‑paste copy shops.<br>
+            • High‑volume informal economy near Mile 2 and Igbosere areas.</p>
+  
+          <h3>Social Life</h3>
+          <p>• Bustling residential and commercial streets; renowned for mender roads and choked traffic.<br>
+            • Rich neighborhood networks organize festivals, youth groups, and religious associations.</p>
+          <a href="#lga-grid" class="btn" style="margin-top: 2rem;">Back</a>
+        </section>
+      </div>
+  
+  
+      <a href="index.html" class="btn" style="margin-top: 2rem;">Back</a>
+    </div>
+  </section>
+  <footer>
+    <div class="container footer-split">
+      <!-- Column 1 -->
+      <div class="footer-column left">
+        <h4>Contact Us</h4>
+  
+        <form class="contact-form">
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send</button>
+        </form>
+  
+        <div class="footer-about">
+          <img src="img/lagos-state-logo.png" alt="Lagos Logo" class="lagos-logo" />
+          <h4>Lagos State Government Empowerment Agency</h4>
+          <p class="tiny">
+            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut enim ad minim veniam...
+          </p>
+        </div>
+      </div>
+  
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+  
+      <div class="footer-column right">
+        <div class="footer-feedback">
+          <h4>Send Feedback</h4>
+          <form class="feedback-form">
+            <textarea placeholder="Your Feedback" required></textarea>
+          </form>
+          <button type="submit" class="btn-outline">Send</button>
+        </div>
+      
+        <div class="footer-links-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/appreciate.html">Appreciation</a></li>
+            <li><a href="/project.html">Projects</a></li>
+            <li><a href="#"><strong>Explore Lagos</strong></a></li>
+          </ul>
+          <p class="footer-copyright">
+            © 2010 – 2020 &nbsp; <a href="#">Privacy</a> – <a href="#">Terms</a>
+          </p>          
+</div>
+      </div>
+      
+      
+  </footer>
+  <script src="/js/script.js"></script>  
+</body>
+</html>

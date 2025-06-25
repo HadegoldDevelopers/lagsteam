@@ -1,0 +1,3 @@
+Explore is a section of the final project; section to showcase the beauty, diversity, and local government areas (LGAs) of Lagos State, Nigeria. It features interactive maps, detailed highlights of key LGAs, and engaging multimedia sections to help visitors learn more about Lagos.
+
+With an intuitive design, responsive layout, and integration of the Leaflet JS library for mapping, users can easily navigate through various locations within Lagos. From cultural centers to historic places, Explore Lagos serves as both an educational resource and an engaging visual guide.
