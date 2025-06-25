@@ -1019,6 +1019,50 @@ h3 {
   object-fit: cover;
 }
 
+/*MORE LGAs DROPDOWN*/
+.dropdown {
+  position: relative;
+}
+
+.dropdown-menu {
+  position: absolute;
+  left: 16rem;
+  bottom: 3.2rem;
+  background-color: var(--green);
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  z-index: 1000;
+  display: none;
+  padding: 2rem;
+  list-style: none;
+  margin: 0;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1rem;
+  transition: all 0.3s ease;
+}
+
+/* Show on hover */
+.dropdown:hover .dropdown-menu {
+  display: grid;
+}
+
+.dropdown-menu .col {
+  font-size: 1.15rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.dropdown-menu a {
+  color: white;
+  text-decoration: none;
+  padding: 6px 10px;
+  display: block;
+  border-radius: 4px;
+}
+
+.dropdown-menu a:hover {
+  background-color: #023120;
+}
 
 .tx {
   padding-bottom: 20px;
@@ -1065,6 +1109,10 @@ h3 {
   .gov-appreciation-section p:nth-of-type(2) {
     font-size: 1rem;
   }
+
+    .dropdown-menu {
+    left: 0rem;
+  }
 }
 @media (max-width: 768px) {
   body {
@@ -1105,6 +1153,11 @@ h3 {
     gap: 1rem;
     padding: 1rem 0;
   }
+
+
+  .dropdown-menu {
+  left: 0rem;
+}
 
 
   .swiper-wrapper {

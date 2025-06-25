@@ -34,4 +34,25 @@ document.addEventListener("DOMContentLoaded", () => {
 
       map.fitBounds(L.geoJSON(geojson).getBounds());
     });
+  const moreLga = document.querySelector(".lga-list");
+  const dropdownMenu = document.querySelector(".dropdown-menu");
+
+  if (moreLga && dropdownMenu) {
+    let isClickedOpen = false;
+
+    moreLga.addEventListener("click", (e) => {
+      e.preventDefault();
+      isClickedOpen = !dropdownMenu.classList.contains("toggle");
+      dropdownMenu.classList.toggle("toggle");
+    });
+
+    document.addEventListener("click", (e) => {
+      if (
+        !e.target.closest(".dropdown") &&
+        dropdownMenu.classList.contains("toggle")
+      ) {
+        dropdownMenu.classList.remove("toggle");
+      }
+    });
+  }
 });
