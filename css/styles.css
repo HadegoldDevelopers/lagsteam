@@ -14,8 +14,6 @@
   --dark-green-hover: #7ba646;
   --sky-blue-header: #00173A;
   --discover-overlay-color: rgba(2, 18, 37, 0.858);
-  --brt-bus-color: #0056B3;
-  --yellow-bus-color: #FFD700;
   --footer-dark-blue: #0A225F;
     /* Dark blue from the image */
     --contact-form-bg: #1C2D5A;
@@ -1207,110 +1205,145 @@ nav a.active {
   display: block;
 }
 
-/* BRT and Moving Bus Animation Container (now applied to .brt-animation-text-banner) */
+/* Parent Banner Container */
 .brt-animation-text-banner {
-  background-color: var(--brt-banner-bg);
-  color: var(--white);
-  padding: 1rem 0;
+  background-color: var(--brt-banner-bg, #004080);
+  /* fallback deep blue */
+  color: white;
   text-align: center;
   font-size: 1.1rem;
   font-style: italic;
   font-weight: 500;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
-  flex-shrink: 0;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   overflow: hidden;
-  height: 90px;
-  padding-top: 5px;
-
+  height: 120px;
+  padding-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Text Overlay */
 .brt-animation-text-overlay {
   position: absolute;
-  top: 50%;
+  top: 10px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 3;
   white-space: nowrap;
-
+  font-size: 1.2rem;
 }
 
-/* Bus Animation Styles - Common styles for all buses */
+/* Bus Base Style */
 .bus {
   position: absolute;
   height: 70px;
   width: 140px;
   border-radius: 8px;
-  box-shadow: none;
-  animation: bus-move 15s linear infinite;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  animation: bus-move 15s linear infinite;
+  z-index: 2;
+  top: 10px;
 }
 
-/* Styles for BRT buses using background-image */
+/* BRT Blue Bus */
 .brt-bus {
-  background-image: url('/img/brt-bus.png');
-  background-color: transparent;
-  border: none;
+  background-image: url('/img/brt.eacc3cf894ece6a28ee365c04ae1e333.svg');
 }
 
-/* Styles for Yellow Lagos buses using background-image */
+/* Yellow Bus */
 .yellow-bus {
   background-image: url('/img/hand-drawn-yellow-bus-black-260nw-731778889-removebg-preview.png');
-  background-color: transparent;
-  border: none;
 }
 
-/* Specific bus positions and animation delays/durations */
+/* Rail Track Below */
+.blue-rail {
+  position: absolute;
+  bottom: 0;
+  left: -600px;
+  height: 70px;
+  width: 400px;
+  background-image: url('/img/lasg__blueline__rail.a0174585d6cf2ae259efb6c728b852aa.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  animation: scrollRailForward 20s linear infinite;
+  z-index: 1;
+}
+
+/* Animate Buses Rightward */
+@keyframes bus-move {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(100vw + 400px));
+  }
+}
+
+/* Animate Rail Rightward (beneath) */
+@keyframes scrollRailForward {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
+    transform: translateX(calc(100vw + 600px));
+  }
+}
+
+/* Individual Bus Timing (staggered, far apart) */
 .bus-1 {
-  top: 10px;
   left: -100px;
   animation-delay: 0s;
   animation-duration: 25s;
 }
 
 .bus-2 {
-  top: 10px;
-  left: -200px;
-  animation-delay: 3s;
+  left: -300px;
+  animation-delay: 5s;
   animation-duration: 28s;
 }
 
-/* Adjusted top to match bus-1 for consistency */
 .bus-3 {
-  top: 10px;
-  left: -300px;
-  animation-delay: 6s;
+  left: -600px;
+  animation-delay: 10s;
   animation-duration: 26s;
 }
 
 .bus-4 {
-  top: 10px;
-  left: -400px;
-  animation-delay: 9s;
+  left: -900px;
+  animation-delay: 15s;
+  animation-duration: 30s;
+}
+
+.bus-5 {
+  left: -1200px;
+  animation-delay: 20s;
   animation-duration: 27s;
 }
 
-/* Adjusted top to match bus-1 for consistency */
-.bus-5 {
-  top: 10px;
-  left: -500px;
-  animation-delay: 12s;
-  animation-duration: 25s;
-}
+/* Responsive Adjustments */
+@media (max-width: 768px) {
 
-@keyframes bus-move {
-  0% {
-    transform: translateX(0);
+  .bus,
+  .blue-rail {
+    height: 50px;
+    width: 100px;
   }
-  100% {
-    transform: translateX(calc(100vw + 600px));
+
+  .brt-animation-text-banner {
+    height: 100px;
+    font-size: 1rem;
+  }
+
+  .brt-animation-text-overlay {
+    font-size: 1rem;
   }
 }
-
 /* --- HEADLINES --- */
 #lga-grid h2,
 #lga-map h2 {
@@ -1472,6 +1505,13 @@ nav a.active {
 
 .tx {
   padding-bottom: 20px;
+  font-size: 1.2rem;
+  color: #fff;
+  /* White text */
+  font-weight: 500;
+  text-shadow: 1px 1px 4px rgba(0, 0, 0, 0.6);
+  /* Black shadow for contrast */
+  line-height: 1.6;
 }
 
 .dl {
@@ -1804,6 +1844,7 @@ footer {
 
 .footer-links a:hover {
   text-decoration: underline;
+  color: #4CAF50;
 }
 
 .footer-column {
@@ -1880,15 +1921,7 @@ nav a.active,
 }
 
 .btn-outline-header {
-  /* Style for the 'Explore Lagos' button in header */
-  border: 2px solid var(--green-dark-btn);
-  color: var(--green-dark-btn);
-  background: transparent;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  font-weight: normal;
-  /* Override bold if needed */
-  transition: background 0.3s ease, color 0.3s ease;
+  border: 2px solid #0E4833
 }
 
 .btn-outline-header:hover {
@@ -2387,7 +2420,6 @@ nav a.active,
   padding: 6px 12px;
   font-size: 0.8em;
 }
-}
 
 @media (max-width: 480px) {
   .hero-content-pro h1 {
@@ -2404,33 +2436,33 @@ nav a.active,
     /* Wider buttons on very small screens */
   }
 }
-* Responsive adjustments for desktop split layout */ @media (min-width: 769px) {
+/* Responsive adjustments for desktop split layout */
+@media screen and (min-width: 769px) {
   .hero-split-container {
+    display: flex;
     flex-direction: row;
-    /* Row layout for desktop */
+    /* Side-by-side on desktop */
+    align-items: center;
+    justify-content: space-between;
+    gap: 2rem;
+  }
+
+  .hero-split-text {
     text-align: left;
-    /* Align text to left on desktop */
+    /* Align text to the left */
+    flex: 1;
   }
 
-  .hero-image-wrapper-split {
-    max-width: 50%;
-    /* Image takes half width */
+  .hero-split-image {
+    flex: 1;
+    display: flex;
+    justify-content: center;
+    align-items: center;
   }
 
-  .hero-content-pro {
-    max-width: 50%;
-    /* Content takes half width */
-    text-align: left;
-    /* Text aligns left */
-    padding-left: 2rem;
-    /* Add some space between image and text */
-  }
-
-  .hero-buttons-pro {
-    flex-direction: row;
-    /* Buttons side-by-side on desktop */
-    justify-content: flex-start;
-    /* Align buttons to the start */
+  .hero-split-image img {
+    max-width: 100%;
+    height: auto;
   }
 }
 
@@ -2549,5 +2581,166 @@ body:has(.project-modal:target) {
   .project-modal-content .btn {
     padding: 10px 20px;
     font-size: 1rem;
+  }
+}
+/* Attractions Section */
+.attractions-section {
+  padding: 3rem 1rem;
+  text-align: center;
+  background-color: var(--grey);
+}
+
+.section-header h2 {
+  font-size: 2.5rem;
+  color: var(--blue);
+  margin-bottom: 0.5rem;
+}
+
+.section-header p {
+  font-size: 1.1rem;
+  color: #555;
+  margin-bottom: 2rem;
+}
+
+/* Grid layout (desktop) */
+.attractions-grid .swiper-wrapper {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 1.5rem;
+}
+
+/* Card styling */
+.attraction-card {
+  position: relative;
+  overflow: hidden;
+  border-radius: 12px;
+}
+
+.attraction-card img {
+  width: 100%;
+  height: 200px;
+  object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.attraction-card:hover img {
+  transform: scale(1.05);
+}
+
+/* Hover overlay with name */
+.attraction-card .overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: rgba(0, 0, 0, 0.6);
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  padding: 0.7rem;
+}
+
+.attraction-card:hover .overlay {
+  transform: translateY(0);
+}
+
+.attraction-card .overlay h3 {
+  color: #fff;
+  font-size: 1.1rem;
+  margin: 0;
+}
+
+/* Mobile slider */
+@media (max-width: 768px) {
+  .attractions-grid .swiper-wrapper {
+    display: flex;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    gap: 1rem;
+    padding-bottom: 1rem;
+  }
+
+  .attractions-grid .swiper-slide {
+    flex: 0 0 80%;
+    scroll-snap-align: start;
+  }
+}
+.lagos-achievements {
+  background: #f4f9f6;
+  padding: 60px 20px;
+  color: #0e4833;
+  font-family: 'Segoe UI', sans-serif;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 3rem;
+}
+
+.lagos-achievements .governor-info {
+  text-align: center;
+}
+
+.governor-info img {
+  max-width: 200px;
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+}
+
+.governor-info h2 {
+  margin-top: 1rem;
+  font-size: 1.8rem;
+  color: #093820;
+}
+
+.governor-info .title {
+  color: #cda309;
+  font-weight: bold;
+  text-transform: uppercase;
+  font-size: 0.9rem;
+  margin-top: 4px;
+}
+
+.achievement-details {
+  max-width: 800px;
+}
+
+.achievement-details h3 {
+  text-align: center;
+  font-size: 1.6rem;
+  color: #0e4833;
+  margin-bottom: 1rem;
+}
+
+.achievement-details h3 span {
+  font-size: 1rem;
+  display: block;
+  color: #093820;
+  font-style: italic;
+}
+
+.achievement-details ul {
+  list-style-type: disc;
+  padding-left: 20px;
+}
+
+.achievement-details li {
+  margin-bottom: 12px;
+  line-height: 1.6;
+  font-size: 1rem;
+}
+
+@media screen and (min-width: 768px) {
+  .lagos-achievements {
+    flex-direction: row;
+    justify-content: center;
+    align-items: flex-start;
+  }
+
+  .governor-info,
+  .achievement-details {
+    flex: 1;
+  }
+
+  .governor-info {
+    max-width: 320px;
   }
 }

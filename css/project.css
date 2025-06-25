@@ -195,15 +195,7 @@ nav a.active,
 }
 
 .btn-outline-header {
-  /* Style for the 'Explore Lagos' button in header */
-  border: 2px solid var(--green-dark-btn);
-  color: var(--green-dark-btn);
-  background: transparent;
-  padding: 0.6rem 1.2rem;
-  border-radius: 4px;
-  font-weight: normal;
-  /* Override bold if needed */
-  transition: background 0.3s ease, color 0.3s ease;
+  border: 2px solid #0E4833
 }
 
 .btn-outline-header:hover {
@@ -986,108 +978,143 @@ nav a.active,
   display: block;
 }
 
-/* BRT and Moving Bus Animation Container (now applied to .brt-animation-text-banner) */
+/* Parent Banner Container */
 .brt-animation-text-banner {
-  background-color: var(--brt-banner-bg);
-  color: var(--white);
-  padding: 1rem 0;
+  background-color: var(--brt-banner-bg, #004080);
+  /* fallback deep blue */
+  color: white;
   text-align: center;
   font-size: 1.1rem;
   font-style: italic;
   font-weight: 500;
-  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
   width: 100%;
-  flex-shrink: 0;
   position: relative;
-  z-index: 2;
+  z-index: 1;
   overflow: hidden;
-  height: 90px;
-  padding-top: 5px;
-
+  height: 120px;
+  padding-top: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
 }
 
+/* Text Overlay */
 .brt-animation-text-overlay {
   position: absolute;
-  top: 50%;
+  top: 10px;
   left: 50%;
-  transform: translate(-50%, -50%);
+  transform: translateX(-50%);
   z-index: 3;
   white-space: nowrap;
-
+  font-size: 1.2rem;
 }
 
-/* Bus Animation Styles - Common styles for all buses */
+/* Bus Base Style */
 .bus {
   position: absolute;
   height: 70px;
   width: 140px;
   border-radius: 8px;
-  box-shadow: none;
-  animation: bus-move 15s linear infinite;
   background-size: contain;
   background-repeat: no-repeat;
   background-position: center;
+  animation: bus-move 15s linear infinite;
+  z-index: 2;
+  top: 10px;
 }
 
-/* Styles for BRT buses using background-image */
+/* BRT Blue Bus */
 .brt-bus {
-  background-image: url('/img/brt-bus.png');
-  background-color: transparent;
-  border: none;
+  background-image: url('/img/brt.eacc3cf894ece6a28ee365c04ae1e333.svg');
 }
 
-/* Styles for Yellow Lagos buses using background-image */
+/* Yellow Bus */
 .yellow-bus {
   background-image: url('/img/hand-drawn-yellow-bus-black-260nw-731778889-removebg-preview.png');
-  background-color: transparent;
-  border: none;
 }
 
-/* Specific bus positions and animation delays/durations */
-.bus-1 {
-  top: 10px;
-  left: -100px;
-  animation-delay: 0s;
-  animation-duration: 25s;
+/* Rail Track Below */
+.blue-rail {
+  position: absolute;
+  bottom: 0;
+  left: -600px;
+  height: 70px;
+  width: 400px;
+  background-image: url('/img/lasg__blueline__rail.a0174585d6cf2ae259efb6c728b852aa.svg');
+  background-repeat: no-repeat;
+  background-size: contain;
+  background-position: bottom;
+  animation: scrollRailForward 20s linear infinite;
+  z-index: 1;
 }
 
-.bus-2 {
-  top: 10px;
-  left: -200px;
-  animation-delay: 3s;
-  animation-duration: 28s;
-}
-
-/* Adjusted top to match bus-1 for consistency */
-.bus-3 {
-  top: 10px;
-  left: -300px;
-  animation-delay: 6s;
-  animation-duration: 26s;
-}
-
-.bus-4 {
-  top: 10px;
-  left: -400px;
-  animation-delay: 9s;
-  animation-duration: 27s;
-}
-
-/* Adjusted top to match bus-1 for consistency */
-.bus-5 {
-  top: 10px;
-  left: -500px;
-  animation-delay: 12s;
-  animation-duration: 25s;
-}
-
+/* Animate Buses Rightward */
 @keyframes bus-move {
   0% {
     transform: translateX(0);
   }
 
   100% {
+    transform: translateX(calc(100vw + 400px));
+  }
+}
+
+/* Animate Rail Rightward (beneath) */
+@keyframes scrollRailForward {
+  0% {
+    transform: translateX(0);
+  }
+
+  100% {
     transform: translateX(calc(100vw + 600px));
+  }
+}
+
+/* Individual Bus Timing (staggered, far apart) */
+.bus-1 {
+  left: -100px;
+  animation-delay: 0s;
+  animation-duration: 25s;
+}
+
+.bus-2 {
+  left: -300px;
+  animation-delay: 5s;
+  animation-duration: 28s;
+}
+
+.bus-3 {
+  left: -600px;
+  animation-delay: 10s;
+  animation-duration: 26s;
+}
+
+.bus-4 {
+  left: -900px;
+  animation-delay: 15s;
+  animation-duration: 30s;
+}
+
+.bus-5 {
+  left: -1200px;
+  animation-delay: 20s;
+  animation-duration: 27s;
+}
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+
+  .bus,
+  .blue-rail {
+    height: 50px;
+    width: 100px;
+  }
+
+  .brt-animation-text-banner {
+    height: 100px;
+    font-size: 1rem;
+  }
+
+  .brt-animation-text-overlay {
+    font-size: 1rem;
   }
 }
 
