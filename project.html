@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Projects - Lagos State Government</title>
+  <!-- IMPORTANT: This links to styles.css, as your main CSS file is updated there.
+       If you want a separate project.css, you'll need to create that file
+       and copy the relevant styles into it from the CSS immersive. -->
+  <link rel="stylesheet" href="css/project.css" />
+  <!-- Google Fonts - Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+
+<body>
+  <!-- Header -->
+  <header>
+    <div class="container header-container">
+      <a href="/">
+        <h1 class="logo">
+          <img src="img/logo.png" alt="Lagos State Logo" />
+          <span>Lagos State Government</span>
+        </h1>
+      </a>
+      <div class="hamburger" id="hamburger">
+        <span></span>
+        <span></span>
+        <span></span>
+      </div>
+      <nav id="nav-menu">
+        <ul>
+          <li><a href="index.html">Home</a></li>
+          <li><a href="appreciate.html">Appreciation</a></li>
+          <li><a href="project.html" class="current-page-link">Projects</a></li> <!-- Active link for Projects -->
+          <li><a href="explore.html" class="btn-outline-header">Explore Lagos</a></li>
+        </ul>
+      </nav>
+    </div>
+  </header>
+
+  <!-- Hero Section for Projects Page (Split Layout) -->
+  <section class="hero-section-pro">
+    <div class="hero-split-container container">
+      <div class="hero-image-wrapper-split">
+        <img src="/img/Tech.png" alt="Lagos Class Project" class="hero-split-image">
+      </div>
+      <div class="hero-content-pro">
+        <h1>Lagos Class Project</h1>
+        <p>
+          Discover innovative projects and educational materials from the Lagos
+          State Government's initiatives.
+        </p>
+        <div class="hero-buttons-pro">
+          <a href="#web-development-projects" class="btn-primary btn">View Web Projects</a>
+          <a href="#data-science-projects" class="btn-secondary btn">Explore Data Science</a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- BRT and Moving Bus Animation Banner (Reused from other pages) -->
+  <section class="brt-animation-text-banner">
+    <div class="bus brt-bus bus-1"></div>
+    <div class="bus yellow-bus bus-2"></div>
+    <div class="bus brt-bus bus-3"></div>
+    <div class="bus yellow-bus bus-4"></div>
+    <div class="bus brt-bus bus-5"></div>
+  </section>
+
+  <main>
+    <!-- Web Development Projects Section -->
+    <section class="section projects-grid" id="web-development-projects">
+      <div class="container">
+        <h2>Web Development Projects</h2>
+        <p class="description">
+          Here are some of the key web development projects showcasing innovative front-end and back-end solutions.
+        </p>
+
+        <div class="grid-container">
+          <!-- Web Project Card 1 -->
+          <div class="project-card">
+            <h3>Chess Assignment</h3>
+            <p>
+              The Chess Assignment project is a web-based application designed to simulate a game of chess. It provides a user
+              interface for two players to make moves according to standard chess rules, displays the current board state, and handles
+              game logic such as piece movement validation, check, and checkmate conditions.
+            </p>
+            <a href="#project-download-modal1" class="btn-sm">View Project</a>
+          </div>
+
+          <!-- Web Project Card 2 -->
+          <div class="project-card">
+            <h3>Lagos Connect</h3>
+            <p>
+              The Lagos Connect project is a proposed digital platform by the Lagos State Government. It leverages data science to
+              enhance citizen engagement and streamline public services. By analyzing data on urban trends and needs, it aims to
+              optimize resource allocation and facilitate more informed governmental decisions for a more efficient Lagos.
+            </p>
+            <a href="#project-download-modal2" class="btn-sm">View Project</a>
+          </div>
+
+          <!-- Web Project Card 3 -->
+          <div class="project-card">
+            <h3>Assessments WebAuthouring</h3>
+            <p>
+              A web-based map application integrating Leaflet.js to display geographical data and custom markers.
+            </p>
+            <a href="#project-download-modal3" class="btn-sm">View Project</a>
+          </div>
+
+          <!-- Web Project Card 4 -->
+          <div class="project-card">
+            <h3>chessBoard</h3>
+            <p>
+              A minimalist chessBoard
+            </p>
+            <a href="#project-download-modal4" class="btn-sm">View Project</a>
+          </div>
+
+          <!-- Web Project Card 5 -->
+          <div class="project-card">
+            <h3>Map of Nigeria</h3>
+            <p>
+             Map of Nigeria
+            </p>
+            <a href="#project-download-modal5" class="btn-sm">View Project</a>
+          </div>
+
+          <!-- Web Project Card 6 -->
+          <div class="project-card">
+            <h3>Local Govt version3</h3>
+            <p>
+              Local Govt Web version </p>
+            <a href="#project-download-modal6" class="btn-sm">View Project</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Data Science Projects Section -->
+    <section class="section data-science-projects" id="data-science-projects">
+      <div class="container">
+        <h2>Data Science Projects</h2>
+        <p class="description">
+          Explore data analysis, machine learning, and visualization projects, often accompanied by videos and detailed
+          explanations.
+        </p>
+
+        <div class="data-science-grid-container">
+          <!-- Data Science Project 1 (Video) -->
+          <div class="data-project-item">
+            <h3>Adventure Works</h3>
+            <div class="video-responsive">
+              <!-- Placeholder for your MP4 video -->
+              <video controls style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="/img/data/adventure-works.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p>
+              This project involves analyzing business data for AdventureWorks, a global cycling equipment manufacturer, to track key
+              performance indicators (KPIs) such as sales, revenue, profit, and returns. Using Power BI Desktop, raw CSV files gotten
+              from Github containing transactional, customer, and product data will be transformed, modeled, and visualized into an
+              interactive dashboard. The goal is to enable management to compare regional performance, identify trends, and recognize
+              high-value customers for data-driven decision-making.
+              
+              
+              Tool used is Power BI.
+              Source: GitHub
+            </p>
+            <a href="#" class="btn-sm">View Code/Report</a>
+          </div>
+
+          <!-- Data Science Project 2 (Image) -->
+          <div class="data-project-item">
+            <h3>Sales Report</h3>
+            <img src="/img/data/sales-report.jpg"
+              alt="Sales Report" class="data-project-img">
+            <p>This project involves analysing sales performance for a retail company. The dataset was gotten from Kaggle.com used by
+              Power BI desktop to track insights into sales trends, customer behaviour, and product performance.
+              
+              The goal is to enable management compare seasonal performance, profit generated, identify trends and recognise
+              high-value customers for data-driven decisions making.
+            </p>
+            <a href="#" class="btn-sm">View Code/Report</a>
+          </div>
+
+          <!-- Data Science Project 3 (Video) -->
+          <div class="data-project-item">
+            <h3>This Bike Shop</h3>
+            <div class="video-responsive">
+              <!-- Placeholder for your MP4 video -->
+              <video controls style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="/img/data/the-bike-shop.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p>
+              This bike shop dashboard provides a clear snapshot of business performance across three years of operations. The company
+              generated $8.6 million in total revenue, selling 7,000 bikes to 1,445 customers across three store locations.
+              <br><br>
+              The data reveals some interesting patterns: New York dominates with 71% of customers, while California and Texas account
+              for 20% and 10% respectively. Trek bikes are the clear winner, generating $5.1 million in revenue, with their Slash 8
+              model being the top performer at $616,000. Mountain bikes lead category sales at $3.0 million, followed by road bikes at
+              $1.9 million.
+              <br><br>
+              However, there are concerns - the dashboard shows a 35% month-over-month decline in recent performance. The New York
+              region consistently outperforms others, suggesting successful strategies there that could be replicated in California
+              and Texas to boost overall company growth.
+              <br><br>
+              Tools used<br><br>
+              1.⁠ ⁠Microsoft Excel for ETL [Extract-Transform-load]<br>
+              2. Microsoft powerBI for data cleaning and visualization.</p>
+            <a href="#" class="btn-sm">View Code/Report</a>
+          </div>
+
+          <!-- Data Science Project 4 (Image) -->
+          <div class="data-project-item">
+            <h3>Cookies Sales Analysis</h3>
+            <!-- Placeholder for your MP4 video -->
+            <video controls style="width: 100%; height: 100%; object-fit: cover;">
+              <source src="/img/data/cookies.mp4" type="video/mp4">
+              Your browser does not support the video tag.
+            </video>
+            <p>
+              This Power BI dashboard presents a clean and comprehensive overview of cookie sales created using data sourced from a
+              YouTube channel. It's designed to be user-friendly, while still delivering deep insights through well-organized visuals
+              and metrics. The dataset was first transformed using Power Query, and advanced metrics were derived using DAX formulas
+              to enhance the depth of the analysis. The visualization offers a comprehensive snapshot of performance across various
+              cookie products, customers, and sales metrics.
+              <br><br>
+              At a glance, the company achieved an impressive $1.13 million in total unit sales from 700 orders, distributed across
+              five unique customers. These sales were recorded from a single country, showcasing the concentrated but high-value
+              nature of the business. The total profit generated amounted to a notable $2.72 million, reflecting strong profitability
+              margins.
+              <br><br>
+              Overall, this dashboard offers a clear, data-driven narrative of cookie sales dynamics, which could help stakeholders
+              make informed decisions on product focus, customer relations, and strategic growth.
+              <br><br>
+              Tool & Methodology<br>
+              - Data Transformation: Power Query<br>
+              - Visualization Tool: Microsoft Power BI<br>
+              - Calculations: DAX (Data Analysis Expressions) formulas
+            </p>
+            <a href="#" class="btn-sm">View Code/Report</a>
+          </div>
+
+          <!-- Data Science Project 5 (Video) -->
+          <div class="data-project-item">
+            <h3>Sales Report 2020</h3>
+            <div class="video-responsive">
+              <!-- Placeholder for your MP4 video -->
+              <video controls style="width: 100%; height: 100%; object-fit: cover;">
+                <source src="/img/data/sales-report-2020.mp4" type="video/mp4">
+                Your browser does not support the video tag.
+              </video>
+            </div>
+            <p>
+              Dashboard Description:<br><br>
+              The Excel dashboard provides a comprehensive overview of sales performance for the years 2019–2020. It includes key
+              metrics such as Gross Sales, Profit, Net Sales, Discounts, and Costs, broken down by month. The dashboard also features
+              calculated fields like %Profit and %Discount, derived from the underlying data. Additionally, it displays team-specific
+              Net Sales and monthly Gross Sales contributions. The data is presented in a structured format with clear visualizations
+              (implied by the PivotTable functions) for easy analysis of trends and performance.
+              <br>
+              <br>Data Source:<br>
+              The data can be sourced from public datasets on platforms like *Kaggle* (e.g., "Retail Sales Analytics" or "Global
+              Superstore Dataset"), which often include transactional sales data with similar fields (Gross Sales, Profit, Discounts,
+              etc.).
+              <br><br>
+              Tools Used:<br>
+              - Microsoft Excel: For data organization, calculations (e.g., PivotTables, GETPIVOTDATA), and dashboard creation.<br>
+              - Formulas and Calculated Fields: To derive metrics like %Profit and %Discount. <br>
+              - PivotTables: For summarizing and analyzing the sales data dynamically.<br>
+            </p>
+            <a href="#" class="btn-sm">View Code/Report</a>
+          </div>
+        </div>
+      </div>
+    </section>
+
+
+    <!-- Coding Quiz and Materials Section -->
+    <section class="section coding-section" id="coding-materials">
+      <div class="container split">
+        <!-- Coding Quiz Column -->
+        <div class="coding-quiz">
+          <h2>Coding Quiz and Materials</h2>
+          <p>Test your knowledge with our coding quizzes and access various educational resources to enhance your
+            skills.</p>
+          <div class="coding-buttons">
+            <a href="#" class="btn-dark btn-small">HTML Quiz</a>
+            <a href="#" class="btn-dark btn-small">CSS Quiz</a>
+            <a href="#" class="btn-dark btn-small">JavaScript Quiz</a>
+            <a href="#" class="btn-dark btn-small">Python Materials</a>
+            <a href="#" class="btn-dark btn-small">React Materials</a>
+          </div>
+        </div>
+
+        <!-- Dreamweaver Section Column -->
+        <div class="dreamweaver-section">
+          <h2>Dreamweaver</h2>
+          <p>
+            Explore tutorials and guides on Adobe Dreamweaver to build and design
+            responsive websites visually.
+          </p>
+          <a href="#" class="btn-blue btn-small">Start Quiz</a>
+        </div>
+      </div>
+    </section>
+  </main>
+<!-- Project Download Modal (New Section) -->
+<section id="project-download-modal1" class="project-modal">
+  <div class="project-modal-content">
+    <a href="#close" title="Close" class="project-modal-close">&times;</a>
+    <h2>Download Chess Assignment Files</h2>
+    <p>This section contains the downloadable files for the selected web project.</p>
+    <a href="/downloads/chess_assignment.zip" download class="btn">
+      Download Project (ZIP)
+    </a>
+    <small>File: Chess Assignment (17 MB)</small>
+  </div>
+</section>
+<section id="project-download-modal2" class="project-modal">
+  <div class="project-modal-content">
+    <a href="#close" title="Close" class="project-modal-close">&times;</a>
+    <h2>Download LagosConnect Files</h2>
+    <p>This section contains the downloadable files for the selected web project.</p>
+    <a href="/downloads/LagosConnect.zip" download class="btn">
+      Download Project (ZIP)
+    </a>
+    <small>File: LagosConnect (19.1 MB)</small>
+  </div>
+</section><section id="project-download-modal1" class="project-modal">
+  <div class="project-modal-content">
+    <a href="#close" title="Close" class="project-modal-close">&times;</a>
+    <h2>Download Assessments WebAuthouring Files</h2>
+    <p>This section contains the downloadable files for the selected web project.</p>
+    <a href="/downloads/Assessments_WebAuthouring_MacTayLASG-main.zip" download class="btn">
+      Download Project (ZIP)
+    </a>
+    <small>File: Assessments WebAuthouring (5.2 MB)</small>
+  </div>
+</section><section id="project-download-modal3" class="project-modal">
+  <div class="project-modal-content">
+    <a href="#close" title="Close" class="project-modal-close">&times;</a>
+    <h2>Download Chess Assignment Files</h2>
+    <p>This section contains the downloadable files for the selected web project.</p>
+    <a href="/downloads/chess_assignment.zip" download class="btn">
+      Download Project (ZIP)
+    </a>
+    <small>File: Chess Assignment (10.3 MB)</small>
+  </div>
+</section><section id="project-download-modal4" class="project-modal">
+  <div class="project-modal-content">
+    <a href="#close" title="Close" class="project-modal-close">&times;</a>
+    <h2>Download chessBoard Files</h2>
+    <p>This section contains the downloadable files for the selected web project.</p>
+    <a href="/downloads/chessBoard-main.zip" download class="btn">
+      Download Project (ZIP)
+    </a>
+    <small>File: chessBoard (5.4 MB)</small>
+  </div>
+</section>
+<section id="project-download-modal5" class="project-modal">
+  <div class="project-modal-content">
+    <a href="#close" title="Close" class="project-modal-close">&times;</a>
+    <h2>Download Map of Nigeria Files</h2>
+    <p>This section contains the downloadable files for the selected web project.</p>
+    <a href="/downloads/naijamap-main.zip" download class="btn">
+      Download Project (ZIP)
+    </a>
+    <small>File: Map of Nigeria (3.9 MB)</small>
+  </div>
+</section>
+<section id="project-download-modal6" class="project-modal">
+  <div class="project-modal-content">
+    <a href="#close" title="Close" class="project-modal-close">&times;</a>
+    <h2>Download Local Govt version3 Files</h2>
+    <p>This section contains the downloadable files for the selected web project.</p>
+    <a href="/downloads/localgovt-version3.zip" download class="btn">
+      Download Project (ZIP)
+    </a>
+    <small>File: Local Govt version3 (145 KB)</small>
+  </div>
+</section>
+  <!-- Footer -->
+  <footer>
+    <div class="container footer-split">
+      <!-- Column 1 -->
+      <div class="footer-column left">
+        <h4>Contact Us</h4>
+  
+        <form class="contact-form">
+          <input type="email" placeholder="Your Email" required />
+          <textarea placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn">Send</button>
+        </form>
+  
+        <div class="footer-about">
+          <img src="img/lagos-state-logo.png" alt="Lagos Logo" class="lagos-logo" />
+          <h4>The Lagos State Government Empowerment Agency (LSGEA)</h4>
+          <br>
+          <p class="tiny">
+            We are committed to equipping youths with in-demand digital skills for
+            the 21st-century economy. Through inclusive and practical ICT training in areas like software development, data
+            analytics, cybersecurity, AI, and digital marketing, LSGEA bridges the gap between education and industry needs. In
+            partnership with tech leaders and institutions, the agency fosters innovation, entrepreneurship, and job creation.
+            LSGEA
+            empowers resilient Lagos youths, driving self-reliance and economic growth. By reaching underserved communities, we
+            build a digitally inclusive state where no youth is left behind.
+            Eko o ni baje!O baje ti!</p>
+        </div>
+      </div>
+  
+      <!-- Divider -->
+      <div class="footer-divider"></div>
+  
+      <div class="footer-column right">
+        <div class="footer-feedback">
+          <h4>Send Feedback</h4>
+          <form class="feedback-form">
+            <textarea placeholder="Your Feedback" required></textarea>
+          </form>
+          <button type="submit" class="btn-outline">Send</button>
+        </div>
+  
+        <div class="footer-links-section">
+          <h4>Quick Links</h4>
+          <ul class="footer-links">
+            <li><a href="/index.html">Home</a></li>
+            <li><a href="/appreciate.html">Appreciation</a></li>
+            <li><a href="#"><strong>Projects</strong></a></li>
+            <li><a href="/explore.html">Explore Lagos</a></li>
+          </ul>
+          <p class="footer-copyright">
+            © 2025 - Lagos State Government &nbsp; <a href="#">Privacy</a> – <a href="#">Terms</a>
+          </p>
+        </div>
+      </div>
+  
+  
+  </footer>
+  <script src="/js/script.js"></script>
+  </body>
+  
+  </html>

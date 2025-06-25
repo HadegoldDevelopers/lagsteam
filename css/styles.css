@@ -16,6 +16,29 @@
   --discover-overlay-color: rgba(2, 18, 37, 0.858);
   --brt-bus-color: #0056B3;
   --yellow-bus-color: #FFD700;
+  --footer-dark-blue: #0A225F;
+    /* Dark blue from the image */
+    --contact-form-bg: #1C2D5A;
+    /* Background for contact/feedback forms in footer */
+    --contact-input-bg: #FFFFFF;
+    /* White input background */
+    --green-dark-btn: #0E4833;
+    /* Specific dark green for buttons */
+    --project-hero-bg: #00183A;
+    /* Dark blue background for projects hero */
+    --project-card-bg: #FFFFFF;
+    /* White for project cards */
+    --project-accent-blue: #0772BA;
+    /* Blue for project titles and buttons */
+    --dreamweaver-green: #4CAF50;
+    /* Green for Dreamweaver section */
+    --coding-quiz-bg: #FFFFFF;
+    /* White for coding quiz section */
+    --project-section-bg: #E0F2F7;
+    /* Light blue background for projects main section */
+    --data-science-bg: #0c2f5af3;
+    /* Darker blue for data science section */
+  
 }
 
 * {
@@ -78,7 +101,351 @@ body {
 .hero-actions .btn:hover {
   background-color: #093820;
 }
+/* Header/Hero Section */
+.hero-section-pro {
+  background-image: url('header-bg.jpg');
+  /* Placeholder for header background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  /* Minimum height for the hero section */
+}
 
+.hero-content-pro h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-content-pro p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons-pro button {
+  margin: 0 10px;
+}
+.btn-primary {
+  background-color: #2196F3;
+  /* Blue */
+  color: white;
+}
+
+.btn-primary:hover {
+  background-color: #1976D2;
+}
+
+.btn-secondary {
+  background-color: transparent;
+  color: white;
+  border: 2px solid white;
+}
+
+.btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.2);
+}
+
+.btn-small {
+  background-color: #2196F3;
+  /* Blue */
+  color: white;
+  padding: 8px 15px;
+  font-size: 0.9em;
+}
+
+.btn-small:hover {
+  background-color: #1976D2;
+}
+
+.btn-dark {
+  background-color: #333;
+  color: white;
+  padding: 8px 15px;
+  font-size: 0.9em;
+  margin: 5px;
+}
+
+.btn-dark:hover {
+  background-color: #555;
+}
+
+.btn-blue {
+  background-color: #2196F3;
+  /* Blue */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+}
+
+.btn-blue:hover {
+  background-color: #1976D2;
+}
+
+
+/* Top Bar */
+.top-bar {
+  background-color: #1a237e;
+  /* Dark blue from mockup top bar */
+  color: white;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 5%;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.top-bar .logo img {
+  height: 40px;
+  /* Adjust as needed */
+  filter: brightness(0) invert(1);
+  /* To make a dark logo white if needed */
+}
+
+.main-nav ul {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: flex;
+}
+
+.main-nav ul li {
+  margin-left: 20px;
+}
+
+.main-nav ul li a {
+  color: white;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s ease;
+}
+
+.main-nav ul li a:hover {
+  color: #90CAF9;
+  /* Lighter blue on hover */
+}
+
+/* Header/Hero Section */
+.hero-section-pro {
+  background-image: url('header-bg.jpg');
+  /* Placeholder for header background image */
+  background-size: cover;
+  background-position: center;
+  color: white;
+  text-align: center;
+  padding: 100px 5%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  min-height: 400px;
+  /* Minimum height for the hero section */
+}
+
+.hero-content-pro h1 {
+  font-size: 3em;
+  margin-bottom: 10px;
+}
+
+.hero-content-pro p {
+  font-size: 1.2em;
+  max-width: 600px;
+  margin-bottom: 30px;
+}
+
+.hero-buttons-pro button {
+  margin: 0 10px;
+}
+
+/* Main Content Sections */
+main {
+  padding: 40px 5%;
+}
+
+.video-placeholder {
+  background-color: #ccc;
+  height: 300px;
+  /* Placeholder height */
+  max-width: 800px;
+  margin: 0 auto 30px auto;
+  border: 1px solid #999;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #666;
+  font-style: italic;
+}
+
+.projects-grid {
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.projects-grid h2 {
+  font-size: 2.2em;
+  margin-bottom: 30px;
+  color: #1a237e;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+}
+
+.project-card {
+  background-color: white;
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+}
+
+.project-card h3 {
+  color: #1a237e;
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555;
+}
+
+.coding-section {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
+  gap: 40px;
+  margin-bottom: 40px;
+  justify-content: center;
+  /* Center items when wrapped */
+}
+
+.coding-quiz,
+.dreamweaver-section {
+  flex: 1;
+  /* Allows them to grow and shrink */
+  background-color: white;
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  /* Minimum width before wrapping */
+}
+
+.dreamweaver-section {
+  background-color: #4CAF50;
+  /* Green from mockup */
+  color: white;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.coding-quiz h2,
+.dreamweaver-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: #1a237e;
+  /* Dark blue for quiz title */
+}
+
+.dreamweaver-section h2 {
+  color: white;
+  /* White for dreamweaver title */
+}
+
+.coding-quiz p,
+.dreamweaver-section p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 25px;
+}
+
+.coding-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
+
+/* Responsive Adjustments */
+@media (max-width: 768px) {
+  .top-bar {
+    flex-direction: column;
+    text-align: center;
+  }
+
+  .main-nav ul {
+    margin-top: 15px;
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+
+  .main-nav ul li {
+    margin: 5px 10px;
+  }
+
+  .hero-content-pro h1 {
+    font-size: 2.5em;
+  }
+
+  .hero-content-pro p {
+    font-size: 1em;
+  }
+
+  .projects-grid h2,
+  .coding-quiz h2,
+  .dreamweaver-section h2 {
+    font-size: 1.8em;
+  }
+
+  .coding-section {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .coding-quiz,
+  .dreamweaver-section {
+    width: 100%;
+    max-width: 500px;
+    /* Limit width on smaller screens */
+  }
+}
+
+@media (max-width: 480px) {
+  .hero-content-pro h1 {
+    font-size: 2em;
+  }
+
+  .hero-buttons {
+    flex-direction: column;
+    gap: 15px;
+  }
+
+  .hero-buttons button {
+    margin: 0;
+    width: 80%;
+    /* Make buttons full width */
+  }
+
+  .projects-grid,
+  .coding-section {
+    padding: 20px;
+  }
+}
 .scroll-img {
   max-height: 120px;
   width: auto;
@@ -484,6 +851,44 @@ nav a.active {
   overflow: hidden;
   margin-left: 5%;
 
+}
+/* New/Updated CSS for Circled Images */
+.circular-image-container {
+  display: inline-block;
+  /* Allows it to be treated like text, for centering */
+  position: relative;
+  /* Needed for potential future overlays/badges */
+  width: 80px;
+  /* Adjust size as needed, match v2.jpg approximately */
+  height: 80px;
+  /* Should be equal to width for a perfect circle */
+  border-radius: 50%;
+  /* Makes the container circular */
+  overflow: hidden;
+  /* Clips the image to the circular shape */
+  background-color: #f0f0f0;
+  /* Fallback background for transparent images or while loading */
+  border: 4px solid #00173A;
+  /* Outer dark blue border */
+  padding: 8px;
+  /* Inner padding to create the secondary border effect */
+  box-shadow: 0 0 0 4px var(--green-dark-btn),
+    /* Secondary green border */
+    0 0 10px rgba(0, 0, 0, 0.3);
+  /* Subtle shadow */
+  object-fit: cover;
+  /* Ensures image covers the container */
+}
+
+.circular-image-container img {
+  display: block;
+  /* Remove extra space below image */
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  /* Ensures the image covers the circular area without distortion */
+  border-radius: 50%;
+  /* Ensure the image itself is also rounded within the container */
 }
 
 /* --- BUTTONS --- */
@@ -1445,4 +1850,689 @@ footer {
   width: 2px;
   background-color: rgba(255, 255, 255, 0.2);
   height: auto;
+}
+
+/* Project CSS */
+nav a.active,
+/* Old active class */
+.current-page-link {
+  /* New class for the current page link */
+  background: var(--green-dark-btn);
+  color: var(--white);
+  font-weight: bold;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+}
+
+.btn-outline-header {
+  /* Style for the 'Explore Lagos' button in header */
+  border: 2px solid var(--green-dark-btn);
+  color: var(--green-dark-btn);
+  background: transparent;
+  padding: 0.6rem 1.2rem;
+  border-radius: 4px;
+  font-weight: normal;
+  /* Override bold if needed */
+  transition: background 0.3s ease, color 0.3s ease;
+}
+
+.btn-outline-header:hover {
+  background: var(--green-dark-btn);
+  color: var(--white);
+}
+/* Projects Page Hero Section (Split Layout) */
+.hero-section-pro {
+  position: relative;
+  background: linear-gradient(var(--discover-overlay-color), var(--discover-overlay-color)), url('/img/lagos-night.png');
+  background-size: cover;
+  background-position: center bottom;
+  background-attachment: fixed;
+  background-color: var(--project-hero-bg);
+  /* Dark blue background from variable */
+  color: var(--white);
+  padding: 60px 0;
+  /* Adjusted padding as background image is removed */
+  text-align: center;
+  display: flex;
+  /* Use flex to center content */
+  align-items: center;
+  justify-content: center;
+  min-height: 400px;
+}
+.hero-split-container {
+  display: flex;
+  flex-direction: column;
+  /* Default to column for mobile */
+  align-items: center;
+  gap: 2rem;
+  /* Space between image and text */
+  justify-content: center;
+  max-width: 1000px;
+  /* Limit overall width of the split content */
+  margin: 0 auto;
+  /* Center the split container */
+  padding: 0 1rem;
+  /* Padding for small screens */
+}
+
+.hero-image-wrapper-split {
+  flex: 1;
+  /* Allow image wrapper to take available space */
+  max-width: 100%;
+  /* Default to full width on mobile */
+  text-align: center;
+  /* Center image if it doesn't take full width */
+  border-radius: 8px;
+  /* Rounded corners for image container */
+  overflow: hidden;
+  /* Ensure image corners are respected */
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+  /* Subtle shadow for the image */
+}
+
+.hero-split-image {
+  width: 100%;
+  height: auto;
+  display: block;
+  /* Remove extra space below image */
+  border-radius: 8px;
+  /* Rounded corners for image itself */
+}
+
+.hero-content-pro {
+  flex: 1;
+  /* Allow content to take available space */
+  max-width: 100%;
+  /* Default to full width on mobile */
+  text-align: center;
+  /* Center text on mobile */
+}
+
+.hero-content-pro h1 {
+  font-size: 2.5rem;
+  /* Adjusted for image */
+  margin-bottom: 0.8rem;
+  font-weight: bold;
+  /* Ensure it's bold as in original */
+}
+
+.hero-content-pro p {
+  font-size: 1.1rem;
+  /* Adjusted for image */
+  margin-bottom: 1.5rem;
+}
+
+/* Hero Section Buttons (Projects Page) */
+.hero-buttons-pro {
+  display: flex;
+  flex-direction: column;
+  /* Stack buttons on mobile */
+  gap: 15px;
+  margin-top: 1.5rem;
+  /* Space below paragraph */
+  justify-content: center;
+  /* Center buttons horizontally */
+}
+
+.hero-buttons-pro .btn-primary,
+.hero-buttons-pro .btn-secondary {
+  font-size: 1rem;
+  padding: 10px 24px;
+  border-radius: 6px;
+  text-decoration: none;
+  transition: background 0.3s ease, border-color 0.3s ease;
+  display: inline-block;
+  /* Allow spacing with flex */
+  width: auto;
+  /* Reset width for flex centering */
+  text-align: center;
+  /* Center text within button */
+}
+
+.hero-buttons-pro .btn-primary {
+  background-color: var(--green-dark-btn);
+  /* Dark green from your variables */
+  color: var(--white);
+  border: none;
+}
+
+.hero-buttons-pro .btn-primary:hover {
+  background-color: var(--dark-green-hover);
+}
+
+.hero-buttons-pro .btn-secondary {
+  background-color: transparent;
+  color: var(--white);
+  border: 2px solid var(--white);
+}
+
+.hero-buttons-pro .btn-secondary:hover {
+  background-color: rgba(255, 255, 255, 0.15);
+  /* Slightly transparent white */
+}
+
+/* Projects Grid Section */
+.projects-grid {
+  text-align: center;
+  margin-bottom: 40px;
+  background-color: var(--project-section-bg);
+  /* Apply light blue background */
+  padding: 40px 0;
+  /* Add padding to the section */
+}
+
+.projects-grid h2 {
+  font-size: 2.2em;
+  margin-bottom: 20px;
+  /* Reduced margin */
+  color: var(--project-accent-blue);
+  /* Dark blue for titles */
+}
+
+.projects-grid .description {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  /* Center description */
+  color: #555;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+  gap: 20px;
+  justify-content: center;
+  padding: 0 1rem;
+  /* Padding for the grid items themselves */
+}
+
+.project-card {
+  background-color: var(--project-card-bg);
+  /* White background */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  text-align: left;
+  display: flex;
+  /* Use flex for internal layout of card */
+  flex-direction: column;
+  justify-content: space-between;
+  /* Push button to bottom */
+}
+
+.project-card h3 {
+  color: var(--project-accent-blue);
+  /* Dark blue for titles */
+  font-size: 1.5em;
+  margin-bottom: 10px;
+}
+
+.project-card p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 20px;
+  color: #555;
+  flex-grow: 1;
+  /* Allow paragraph to take space */
+}
+
+/* Data Science Projects Section */
+.data-science-projects {
+  background-color: var(--data-science-bg);
+  /* Darker blue background */
+  color: var(--white);
+  padding: 40px 0;
+  text-align: center;
+  margin-bottom: 40px;
+}
+
+.data-science-projects h2 {
+  color: var(--white);
+  margin-bottom: 20px;
+  font-size: 2.2em;
+}
+
+.data-science-projects .description {
+  max-width: 700px;
+  margin: 0 auto 30px auto;
+  color: #eee;
+  font-size: 1em;
+  line-height: 1.6;
+}
+
+.data-science-grid-container {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+  /* Slightly wider for media */
+  gap: 20px;
+  justify-content: center;
+  padding: 0 1rem;
+}
+
+.data-project-item {
+  background-color: rgba(255, 255, 255, 0.1);
+  /* Slightly transparent white for items */
+  border-radius: 8px;
+  padding: 20px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.data-project-item h3 {
+  color: var(--white);
+  font-size: 1.4em;
+  margin-bottom: 10px;
+}
+
+.data-project-item p {
+  color: #eee;
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 15px;
+  flex-grow: 1;
+}
+
+.video-responsive {
+  position: relative;
+  padding-bottom: 56.25%;
+  /* 16:9 aspect ratio */
+  height: 0;
+  overflow: hidden;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+.video-responsive video {
+  /* Added style for the video tag */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.data-project-img {
+  max-width: 100%;
+  height: auto;
+  display: block;
+  margin-bottom: 15px;
+  border-radius: 4px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.3);
+}
+
+/* Coding Section */
+.coding-section {
+  display: flex;
+  flex-wrap: wrap;
+  /* Allow wrapping on smaller screens */
+  gap: 40px;
+  margin-bottom: 40px;
+  justify-content: center;
+  /* Center items when wrapped */
+  padding: 40px 0;
+  /* Add padding to the section */
+}
+
+.coding-quiz,
+.dreamweaver-section {
+  flex: 1;
+  /* Allows them to grow and shrink */
+  background-color: var(--coding-quiz-bg);
+  /* White for coding quiz */
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  min-width: 300px;
+  /* Minimum width before wrapping */
+  display: flex;
+  /* Flex for internal layout */
+  flex-direction: column;
+  justify-content: space-between;
+  /* Push buttons/link to bottom */
+}
+
+.dreamweaver-section {
+  background-color: var(--dreamweaver-green);
+  /* Green from mockup */
+  color: var(--white);
+}
+
+.coding-quiz h2,
+.dreamweaver-section h2 {
+  font-size: 1.8em;
+  margin-bottom: 15px;
+  color: var(--project-accent-blue);
+  /* Dark blue for quiz title */
+}
+
+.dreamweaver-section h2 {
+  color: var(--white);
+  /* White for dreamweaver title */
+}
+
+.coding-quiz p,
+.dreamweaver-section p {
+  font-size: 0.95em;
+  line-height: 1.5;
+  margin-bottom: 25px;
+  flex-grow: 1;
+  /* Allow paragraph to take space */
+}
+
+.coding-buttons {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  margin-top: auto;
+  /* Push buttons to bottom */
+}
+.btn-dark.btn-small {
+  /* Specific styles for coding quiz buttons */
+  background-color: #333;
+  color: white;
+  padding: 8px 15px;
+  font-size: 0.9em;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.btn-dark.btn-small:hover {
+  background-color: #555;
+}
+
+.btn-blue.btn-small {
+  /* Specific style for Dreamweaver button */
+  background-color: var(--project-accent-blue);
+  /* Blue from variable */
+  color: white;
+  padding: 10px 20px;
+  font-size: 1em;
+  border-radius: 6px;
+  border: none;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+  margin-top: auto;
+  /* Push button to bottom if content varies */
+  align-self: flex-start;
+  /* Align to left */
+}
+
+.btn-blue.btn-small:hover {
+  background-color: #055f9a;
+  /* Darker blue on hover */
+}
+/* Projects Page Hero Section Mobile Adjustments */
+.hero-split-container {
+  flex-direction: column;
+  /* Ensure column on mobile */
+  text-align: center;
+}
+
+.hero-image-wrapper-split {
+  max-width: 90%;
+  /* Adjust image width for mobile */
+}
+
+.hero-content-pro {
+  text-align: center;
+  padding-left: 0;
+  /* Remove padding */
+}
+
+.hero-content-pro h1 {
+  font-size: 2rem;
+  /* Adjust heading size for mobile */
+}
+
+.hero-content-pro p {
+  font-size: 0.9rem;
+  /* Adjust paragraph size for mobile */
+}
+
+.hero-buttons-pro {
+  flex-direction: column;
+  /* Stack buttons vertically on mobile */
+  gap: 10px;
+}
+
+.hero-buttons-pro .btn-primary,
+.hero-buttons-pro .btn-secondary {
+  width: 80%;
+  /* Make buttons wider on mobile */
+  margin: 0 auto;
+  /* Center buttons */
+}
+
+/* Project Grid Section Mobile Adjustments */
+.projects-grid {
+  padding: 30px 0;
+  /* Adjust padding */
+}
+
+.projects-grid h2 {
+  font-size: 1.8em;
+}
+
+.projects-grid .description {
+  font-size: 0.9em;
+  padding: 0 1rem;
+  /* Add horizontal padding for text */
+}
+
+.grid-container {
+  grid-template-columns: 1fr;
+  /* Single column for project cards on mobile */
+  padding: 0 1rem;
+}
+
+/* Coding Section Mobile Adjustments */
+.coding-section {
+  flex-direction: column;
+  /* Stack columns on mobile */
+  padding: 30px 0;
+}
+
+.coding-quiz,
+.dreamweaver-section {
+  min-width: unset;
+  /* Remove min-width constraint */
+  width: 90%;
+  /* Adjust width for mobile */
+  margin: 0 auto;
+  /* Center the sections */
+  padding: 20px;
+  /* Adjust padding */
+}
+
+.coding-quiz h2,
+.dreamweaver-section h2 {
+  font-size: 1.5em;
+}
+
+.coding-quiz p,
+.dreamweaver-section p {
+  font-size: 0.85em;
+}
+
+.coding-buttons {
+  justify-content: center;
+  /* Center buttons */
+}
+
+.btn-dark.btn-small,
+.btn-blue.btn-small {
+  padding: 6px 12px;
+  font-size: 0.8em;
+}
+}
+
+@media (max-width: 480px) {
+  .hero-content-pro h1 {
+    font-size: 1.8rem;
+  }
+
+  .hero-content-pro p {
+    font-size: 0.85rem;
+  }
+
+  .hero-buttons-pro .btn-primary,
+  .hero-buttons-pro .btn-secondary {
+    width: 90%;
+    /* Wider buttons on very small screens */
+  }
+}
+* Responsive adjustments for desktop split layout */ @media (min-width: 769px) {
+  .hero-split-container {
+    flex-direction: row;
+    /* Row layout for desktop */
+    text-align: left;
+    /* Align text to left on desktop */
+  }
+
+  .hero-image-wrapper-split {
+    max-width: 50%;
+    /* Image takes half width */
+  }
+
+  .hero-content-pro {
+    max-width: 50%;
+    /* Content takes half width */
+    text-align: left;
+    /* Text aligns left */
+    padding-left: 2rem;
+    /* Add some space between image and text */
+  }
+
+  .hero-buttons-pro {
+    flex-direction: row;
+    /* Buttons side-by-side on desktop */
+    justify-content: flex-start;
+    /* Align buttons to the start */
+  }
+}
+
+/* New CSS for Project Download Modal */
+.project-modal {
+  position: fixed;
+  /* Fixed position to overlay entire screen */
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.7);
+  /* Semi-transparent black overlay */
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  visibility: hidden;
+  /* Hidden by default */
+  opacity: 0;
+  /* Fully transparent by default */
+  transition: opacity 0.3s ease, visibility 0.3s ease;
+  /* Smooth transition */
+  z-index: 1001;
+  /* Above header and other content */
+}
+
+/* Show modal when its ID is targeted (CSS :target pseudo-class) */
+.project-modal:target {
+  visibility: visible;
+  opacity: 1;
+}
+
+.project-modal-content {
+  background-color: var(--white);
+  padding: 30px;
+  border-radius: 8px;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center;
+  max-width: 500px;
+  width: 90%;
+  /* Responsive width */
+  position: relative;
+  /* For close button positioning */
+  color: var(--black);
+  /* Ensure text is readable against white background */
+}
+
+.project-modal-content h2 {
+  font-size: 1.8rem;
+  color: var(--project-accent-blue);
+  /* Consistent blue heading */
+  margin-bottom: 15px;
+}
+
+.project-modal-content p {
+  font-size: 1rem;
+  color: #555;
+  margin-bottom: 25px;
+}
+
+.project-modal-content .btn {
+  margin-top: 0;
+  /* Override default button margin-top */
+  padding: 12px 25px;
+  /* Larger button for download */
+  background-color: var(--green-dark-btn);
+  /* Dark green download button */
+  font-weight: bold;
+  font-size: 1.1rem;
+}
+
+.project-modal-content .btn:hover {
+  background-color: var(--dark-green-hover);
+  transform: translateY(-1px);
+}
+
+.project-modal-content small {
+  display: block;
+  margin-top: 10px;
+  color: #777;
+  font-size: 0.85rem;
+}
+
+.project-modal-close {
+  position: absolute;
+  top: 15px;
+  right: 20px;
+  color: #999;
+  font-size: 2rem;
+  text-decoration: none;
+  transition: color 0.2s ease;
+}
+
+.project-modal-close:hover {
+  color: #333;
+}
+
+/* Prevent scrolling when modal is active (body scrolling disabled) */
+body:has(.project-modal:target) {
+  overflow: hidden;
+}
+
+@media (max-width: 768px) {
+  .project-modal-content {
+    padding: 20px;
+  }
+
+  .project-modal-content h2 {
+    font-size: 1.5rem;
+  }
+
+  .project-modal-content p {
+    font-size: 0.9rem;
+  }
+
+  .project-modal-content .btn {
+    padding: 10px 20px;
+    font-size: 1rem;
+  }
 }
