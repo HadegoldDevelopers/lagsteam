@@ -1375,7 +1375,7 @@ nav a.active {
   text-align: justify;
   display: none;
   padding: 10px;
-  font-size: 25px;
+  font-size: 1.5rem;
 }
 
 #more section:target {
@@ -1383,7 +1383,7 @@ nav a.active {
 }
 
 .lg {
-  font-size: 40px;
+  font-size: 1.5rem;
   padding-top: 40px;
   padding-bottom: 20px;
 }
@@ -1392,7 +1392,7 @@ nav a.active {
   font-size: 1.8rem;
 }
 
-h3 {
+#more h3 {
   font-size: 1.5rem;
   margin: 1.2rem 0;
 }
@@ -1564,6 +1564,15 @@ h3 {
   .dropdown-menu {
   left: 0rem;
 }
+
+#more h2, .btn{
+  font-size: 1.2rem;
+}
+
+#more h3, p {
+  font-size: 0.9rem;
+}
+
 
 
   .swiper-wrapper {
