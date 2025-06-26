@@ -1272,15 +1272,13 @@ nav a.active {
   animation: scrollRailForward 20s linear infinite;
   z-index: 1;
 }
-
-/* Animate Buses Rightward */
 @keyframes bus-move {
   0% {
     transform: translateX(0);
   }
 
   100% {
-    transform: translateX(calc(100vw + 400px));
+    transform: translateX(calc(100vw + 1600px));
   }
 }
 
@@ -1297,33 +1295,33 @@ nav a.active {
 
 /* Individual Bus Timing (staggered, far apart) */
 .bus-1 {
-  left: -100px;
+  left: -200px;
   animation-delay: 0s;
   animation-duration: 25s;
 }
 
 .bus-2 {
-  left: -300px;
-  animation-delay: 5s;
-  animation-duration: 28s;
+  left: -1000px;
+  animation-delay: 10s;
+  animation-duration: 27s;
 }
 
 .bus-3 {
-  left: -600px;
-  animation-delay: 10s;
-  animation-duration: 26s;
+  left: -1800px;
+  animation-delay: 20s;
+  animation-duration: 29s;
 }
 
 .bus-4 {
-  left: -900px;
-  animation-delay: 15s;
-  animation-duration: 30s;
+  left: -2600px;
+  animation-delay: 30s;
+  animation-duration: 31s;
 }
 
 .bus-5 {
-  left: -1200px;
-  animation-delay: 20s;
-  animation-duration: 27s;
+  left: -3400px;
+  animation-delay: 40s;
+  animation-duration: 33s;
 }
 
 /* Responsive Adjustments */
