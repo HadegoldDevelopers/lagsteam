@@ -68,7 +68,7 @@ body {
   margin-bottom: 10px;
 }
 .hero-overlay {
-  background: rgba(243, 240, 240, 0.274);
+  background: rgba(1, 113, 12, 0.446);
   /* This is the transparent black overlay */
   padding: 60px 20px;
   border-radius: 8px;
@@ -2764,4 +2764,68 @@ body:has(.project-modal:target) {
   .governor-info {
     max-width: 320px;
   }
+}
+.lagos-insights-section {
+  background-color: #0972bb;
+  color: #ffffff;
+  padding: 4rem 1rem;
+  font-family: 'Segoe UI', sans-serif;
+  position: relative;
+}
+
+/* Colored top strip */
+.strip_lines {
+  display: flex;
+  width: 100%;
+  height: 8px;
+  margin-bottom: 2rem;
+}
+
+.lineIn {
+  flex: 1;
+}
+
+.lasg_red {
+  background-color: #a71b2a;
+}
+
+.lasg_blue {
+  background-color: #0972bb;
+}
+
+.lasg_yellow {
+  background-color: #f2c20f;
+}
+
+.lasg_green {
+  background-color: #0e4833;
+}
+
+.insights-content {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 3rem;
+  justify-content: space-between;
+}
+
+.text-explore,
+.brt-section {
+  flex: 1;
+  min-width: 280px;
+}
+
+.text-explore h2,
+.brt-section h2 {
+  font-size: 2rem;
+  font-weight: 700;
+  color: #f2c20f;
+  /* Yellow for header pop */
+  margin-bottom: 1rem;
+}
+
+.text-explore p,
+.brt-section p {
+  line-height: 1.8;
+  font-size: 1.05rem;
+  color: #a71b2a;
 }
