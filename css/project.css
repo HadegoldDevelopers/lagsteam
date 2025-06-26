@@ -14,8 +14,6 @@
   --dark-green-hover: #7ba646;
   --sky-blue-header: #00173A;
   --discover-overlay-color: rgba(2, 18, 37, 0.858);
-  --brt-bus-color: #0056B3;
-  --yellow-bus-color: #FFD700;
   --footer-dark-blue: #0A225F;
   /* Dark blue from the image */
   --contact-form-bg: #1C2D5A;
@@ -1559,7 +1557,6 @@ h3 {
   background-color: var(--white);
   color: var(--black);
 }
-
 .footer-feedback>.btn-outline {
   display: block;
   width: 100%;
@@ -1693,7 +1690,6 @@ footer {
   height: auto;
   margin-bottom: 0.5rem;
 }
-
 .footer-links-section {
   margin-top: 2rem;
 }
