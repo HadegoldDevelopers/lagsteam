@@ -1685,6 +1685,27 @@ nav a.active {
            }
 }
 
+#ministry {
+  max-width: 100%;
+  display: flex;
+}
+
+
+#ministry .left {
+  max-width: 60%;
+}
+
+#ministry .grid-item {
+  max-width: 40%;
+  background: #f8f8f8;
+  padding: 0;
+  margin-top: 4rem;
+  margin-left: 3rem;
+  border-radius: 8px;
+  text-align: center;
+  border: 0;
+}
+
 /* --- CONTACT & FEEDBACK --- */
 .contact input,
 .contact textarea {
